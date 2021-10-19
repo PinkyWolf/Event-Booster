@@ -1,0 +1,62 @@
+@keyframes animateOpacityIn {
+	from {
+		opacity: 0;
+		visibility: hidden;
+	}
+	to {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+@keyframes animateOpacityOut {
+	from {
+		opacity: 1;
+		visibility: visible;
+	}
+	to {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@keyframes animateLeftIn {
+	from {
+		left: -100%;
+		opacity: 0;
+	}
+	to {
+		left: 0;
+		opacity: 1;
+	}
+}
+@keyframes animateLeftOut {
+	from {
+		left: 0;
+		opacity: 1;
+	}
+	to {
+		left: -100%;
+		opacity: 0;
+	}
+}
+
+@keyframes animateBottomIn {
+	from {
+		bottom: -100%;
+		opacity: 0;
+	}
+	to {
+		bottom: 0;
+		opacity: 1;
+	}
+}
+@keyframes animateBottomOut {
+	from {
+		bottom: 0;
+		opacity: 1;
+	}
+	to {
+		bottom: -100%;
+		opacity: 0;
+	}
+}

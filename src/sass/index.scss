@@ -1,0 +1,24 @@
+/// UTILS
+@import './utils/animation';
+@import './utils/functions';
+@import './utils/variables';
+@import './utils/mixin';
+
+/// BASIC
+@import './basic/root';
+@import './basic/main';
+@import './basic/hidden';
+@import './basic/container';
+
+/// ELEMENTS
+@import './elements/logo';
+@import './elements/search';
+@import './elements/preloader.scss';
+
+/// LAYOUTS
+@import './layouts/hero';
+@import './layouts/cardset';
+@import './layouts/country_list';
+@import './layouts/footer';
+@import './layouts/modal';
+@import './layouts/pagination';

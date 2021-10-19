@@ -1,0 +1,34 @@
+<div class="modal-insides" data-event-id="{{id}}">
+
+    <div class="img-hover"><img src="{{img.url}}" alt="{{name}}" class="modal-round-img"></div>
+    <div class="modal__content">
+        <img src="{{img.url}}" alt="{{name}}" class="modal-img">
+        <div class="modal__text-content">
+            {{#if info}}
+            <h1 class="modal-title">INFO</h1>
+            <p class="modal-text">{{info}}</p>
+            {{/if}}
+            <h2 class="modal-title">WHEN</h2>
+            <div class="modal-text">
+                <p>{{dates.start.localDate}}</p>
+                <p>{{dates.start.localTime}}</p>
+            </div>
+            <h2 class="modal-title">WHERE</h2>
+            <p class="modal-text">{{_embedded.venues.0.city.name}}, {{_embedded.venues.0.country.name}}</p>
+            <p class="modal-text">{{_embedded.venues.0.name}}</p>
+            <h2 class="modal-title">WHO</h2>
+            <p class="modal-text author">{{name}}</p>
+            <h2 class="modal-title">PRICES</h2>
+            <p class="modal-text">{{priceRanges.0.type}} {{priceRanges.0.min}} - {{priceRanges.0.max}} {{priceRanges.0.currency}}
+            </p>
+            <form target="_blank">
+            <button class="modal-btn buy-btn" formaction={{url}}>BYE TICKETS</button>
+            </form>
+            <p class="modal-text">{{priceRanges.1.type}} {{priceRanges.1.min}} - {{priceRanges.1.max}} {{priceRanges.1.currency}}
+            </p>
+            <form target="_blank">
+            <button class="modal-btn buy-btn" formaction={{url}}>BYE TICKETS</button>
+            </form>
+        </div>
+    </div>    
+</div>

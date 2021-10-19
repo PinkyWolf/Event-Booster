@@ -1,0 +1,101 @@
+.search__form {
+    @include from(tablet) {
+        display: flex;
+        justify-content: space-between;
+        width: 570px;
+        margin: 0 auto;
+    }
+}
+
+.search__field {
+    position: relative;
+    & input:hover,
+    & input:focus,
+    & input.active {
+        outline: none;
+        box-shadow: 0 0 3px 3px var(--textAccent);
+        @include to(tablet) {
+            color: #ffff;
+        }
+    }
+    &:first-child {
+        @include to(tablet) {
+            margin-bottom: 25px;
+        }
+    }
+    @include from(tablet) {
+        width: 270px;
+    }
+    & input {
+        display: block;
+        width: 100%;
+        padding: 10px 30px;
+        color: var(--textGray);
+        font-size: 16px;
+        line-height: 20px;
+        border-radius: 20px;
+        background: var(--inputBg);
+        backdrop-filter: blur(20px);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        transform: translateY(-50%);
+        display: block;
+        width: 12px;
+        height: 12px;
+        background: url('../img/svg/search.svg') no-repeat;
+    }
+}
+
+.search__field.country {
+    input {
+        cursor: pointer;
+    }
+    &::after {
+        background: url('../img/svg/select.svg') no-repeat;
+    }
+    // &:hover::after {
+    // 	background: url('../img/svg/select-active.svg') no-repeat;
+    // }
+}
+
+.country__list {
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    margin-top: 3px;
+    transition: height 0.4s;
+    overflow: auto;
+    @include to(tablet) {
+        height: 180px;
+    }
+    @include from(tablet) {
+        height: 140px;
+    }
+    @include from(desktop) {
+        height: 183px;
+    }
+    .search__field :not(.active)+& {
+        @include hidden;
+        width: 100%;
+    }
+    .country__list_item {
+        margin: 5px;
+        input {
+            @include to(tablet) {
+                color: #ffff;
+            }
+        }
+    }
+    .country__item {
+        margin-top: 1px;
+        padding: 10px 30px;
+        border-radius: 20px;
+        background: var(--inputBg);
+        backdrop-filter: blur(20px);
+        cursor: pointer;
+    }
+}

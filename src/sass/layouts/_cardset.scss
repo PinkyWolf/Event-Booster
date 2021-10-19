@@ -1,0 +1,176 @@
+.cardset__list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -7px;
+	padding-top: 7px;
+
+	@include from(tablet) {
+		margin: -13.5px;
+		padding-top: 13.5px;
+	}
+
+	@include from(desktop) {
+		margin: -35px;
+		padding-top: 35px;
+	}
+}
+
+.cardset__item {
+	position: relative;
+
+	@include from(mobile) {
+		width: calc(100% / 2 - 14px);
+		// height: 161px;
+		margin: 7px;
+	}
+
+	@include from(tablet) {
+		width: calc(100% / 3 - 27px);
+		// height: 227px;
+		margin: 13.5px;
+	}
+
+	@include from(desktop) {
+		width: calc(100% / 4 - 70px);
+		margin: 25px 35px;
+	}
+}
+
+// .cardset__item > p,
+.cardset__item > h2 {
+	height: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.cardset__img {
+	width: 100%;
+	object-fit: cover;
+	cursor: pointer;
+	margin-bottom: 5px;
+	border-radius: 50px 0;
+	overflow: hidden;
+	@include from(mobile) {
+		height: 161px;
+	}
+
+	@include from(tablet) {
+		height: 227px;
+	}
+}
+
+.cardset__name {
+	margin-bottom: 5px;
+	color: var(--textAccent);
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 17px;
+	text-align: center;
+
+	// white-space: nowrap; /* Запрещаем перенос строк */
+	overflow: hidden; /* Обрезаем все, что не помещается в область */
+	text-overflow: ellipsis;
+
+	@include from(tablet) {
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
+
+.cardset__date {
+	margin-bottom: 5px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 17px;
+	text-align: center;
+
+	@include from(tablet) {
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
+
+.cardset__place {
+	display: block;
+	padding-left: 5px;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 15px;
+	text-align: center;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-image: linear-gradient(to right, #23abd4, #23abd4 50%, #fff 50%);
+	background-size: 200% 100%;
+	background-position: -100%;
+	transition: all 0.3s ease-in-out;
+	@include from(tablet) {
+		font-size: 14px;
+		line-height: 17px;
+	}
+
+	&::before {
+		content: '';
+		width: 7px;
+		height: 10px;
+		position: absolute;
+		background: url('../img/svg/locator.svg') no-repeat;
+		background-size: 12px;
+		margin-left: -17px;
+		width: 30px;
+		height: 54px;
+		transition: all 0.3s ease-in-out;
+	}
+	&:hover {
+		background-position: 0%;
+		&:before {
+			width: 100%;
+		}
+	}
+}
+
+.cardset__rect {
+	position: absolute;
+	top: -9px;
+	right: -10px;
+	width: 109px;
+	height: 101px;
+	border: 1px solid rgba(220, 86, 197, 0.3);
+	box-sizing: border-box;
+	border-radius: 50px 0px;
+	cursor: pointer;
+
+	@include from(tablet) {
+		top: -13px;
+		right: -14px;
+		width: 153px;
+		height: 143px;
+	}
+}
+
+.event__notFound {
+	width: 100%;
+	font-size: 29px;
+	text-align: center;
+	padding: 15px;
+
+	@include from(tablet) {
+		margin: 70px;
+		font-size: 40px;
+	}
+}
+.cardset__list {
+	&:hover .cardset__item:not(:hover) {
+		filter: grayscale(100%);
+
+		&::after {
+			background-color: rgba(#000, 0.2);
+		}
+	}
+}
+
+.cardset__item {
+	position: relative;
+	transition: 0.3s;
+}

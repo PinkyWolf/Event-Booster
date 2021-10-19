@@ -1,0 +1,6 @@
+<ul class="country__list">
+    <li class="country__list_item"><input type="button" class="country__button" data-country-code=" " value="Choose country"></li>
+    {{#each this}}
+        <li class="country__list_item"><input type="button" class="country__button" data-country-code="{{@key}}" value="{{this}}"></li>
+    {{/each}}
+</ul>

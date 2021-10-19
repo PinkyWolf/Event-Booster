@@ -1,0 +1,34 @@
+.logo {
+	position: absolute;
+	width: 107px;
+	height: 90px;
+	padding: 24px 0 0 24px;
+	border-bottom-right-radius: 100%;
+	backdrop-filter: blur(30px);
+
+	@include from(tablet) {
+		width: 179.5px;
+		height: 151px;
+		padding: 40px 0 0 40px;
+	}
+
+	@include from(desktop) {
+		width: 238.5px;
+		height: 201px;
+	}
+}
+
+.logo__img {
+	width: 60px;
+	height: 30px;
+
+	@include from(tablet) {
+		width: 100px;
+		height: 50px;
+	}
+
+	@include from(desktop) {
+		width: 136px;
+		height: 68px;
+	}
+}

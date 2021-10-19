@@ -1,0 +1,27 @@
+@mixin from($point) {
+	@media screen and (min-width: getRange($point)) {
+		@content;
+	}
+}
+
+@mixin to($point) {
+	@media screen and (max-width: getRange($point) - 1) {
+		@content;
+	}
+}
+
+@mixin from-to($pointFrom, $pointTo) {
+	@media screen and (min-width: getRange($pointFrom)) and (max-width: getRange($pointTo) - 1) {
+		@content;
+	}
+}
+
+@mixin hidden {
+	position: absolute;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	overflow: hidden;
+}

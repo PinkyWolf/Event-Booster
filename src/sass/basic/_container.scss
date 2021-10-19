@@ -1,0 +1,19 @@
+.container {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding: 0 $padding_mobile;
+
+	@include from(tablet) {
+		padding: 0 $padding_tablet;
+		width: getRange('tablet');
+	}
+	@include from(desktop) {
+		padding: 0 $padding_desktop;
+		width: getRange('desktop');
+	}
+
+	&.nopad {
+		padding: 0;
+	}
+}

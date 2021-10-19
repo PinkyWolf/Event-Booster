@@ -1,0 +1,54 @@
+.hero {
+	height: 364px;
+	background-image: url(../img/pic/picHeroTablet@1x.webp);
+	background-repeat: no-repeat;
+	background-position: center;
+
+	@include from(tablet) {
+		background-size: 100%;
+	}
+	@include from(desktop) {
+		height: 446px;
+		background-image: url(../img/pic/picHeroDesctop@1x.webp);
+		background-size: 100%;
+	}
+}
+
+.hero__overlay {
+	background: var(--headerBg);
+	height: 100%;
+}
+
+.hero__title {
+	width: 212px;
+	margin: 0 auto;
+	padding: 78px 0 25px;
+	color: var(--textAccent);
+	font-size: 18px;
+	font-weight: 900;
+	line-height: 22px;
+	text-align: center;
+	font-family: 'Libre Baskerville';
+
+	@include from(tablet) {
+		width: 353px;
+		padding: 40px 0 27px;
+		font-size: 30px;
+		line-height: 37px;
+	}
+
+	@include from(desktop) {
+		width: 590px;
+		padding-bottom: 52px;
+		font-size: 50px;
+		line-height: 61px;
+	}
+}
+
+.overlay-between-sections {
+	background: var(--overlayHeroBetweensections);
+	position: relative;
+	width: 100% !important;
+	height: 120px;
+	top: -70px;
+}

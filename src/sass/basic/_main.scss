@@ -1,0 +1,66 @@
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	margin-left: -10px;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	min-height: 100%;
+	color: var(--textWhite);
+	background: var(--bodyBg);
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	font: 14px/17px 'Montserrat', sans-serif;
+
+	&.modal-opened {
+		overflow: hidden;
+	}
+
+	background-repeat: no-repeat;
+	background-image: url(.././img/svg/bg/bg-mobile.svg);
+
+	@include from(tablet) {
+		background-position: center 135px;
+		background-image: url(.././img/bg/bg-body-tablet.png);
+	}
+	@include from(desktop) {
+		background-position: center 225px;
+		background-image: url(.././img/bg/bg-body-desktop.webp);
+	}
+}
+
+img {
+	display: block;
+}
+
+ul {
+	list-style: none;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background: #5a6f70;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #dc56c5;
+}
+::-webkit-scrollbar-track {
+	background: #5a6f70;
+	border-radius: 10px;
+	box-shadow: inset 7px 10px 12px #323b3b;
+}

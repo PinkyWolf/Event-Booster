@@ -1,0 +1,20 @@
+.footer-text {
+	color: var(--textGrey);
+	padding: 0 9px 27px;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+
+	@include from(tablet) {
+		font-size: 16px;
+		line-height: 20px;
+		padding-bottom: 18px;
+	}
+
+	@include from(desktop) {
+		padding-bottom: 19px;
+	}
+}
+.footer-text-heart {
+	color: red;
+}
