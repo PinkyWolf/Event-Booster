@@ -32,7 +32,7 @@ body {
 
 	@include from(tablet) {
 		background-position: center 135px;
-		background-image: url(.././img/bg/bg-body-tablet.png);
+		background-image: url(.././img/bg/bg-body-tablet.webp);
 	}
 	@include from(desktop) {
 		background-position: center 225px;
